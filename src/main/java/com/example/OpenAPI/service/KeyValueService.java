@@ -4,11 +4,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class KeyValueService {
 
-    public Map<String,String> data=new HashMap<>();
+    public Map<String,String> data=new ConcurrentHashMap<>();
 
     public void storeDataInMap(String key, String value){
 
